@@ -199,4 +199,4 @@ console.log(joe.scopeArrow());
 // 2. What is "this" when joe.scopeArrow() is invoked?
 //it is equal to undefined in console, and I am unsure of answer.
 // 3. Explain why "this" is different when an arrow function is used.
-//because it causes the "this" to bubble up.
+//because it causes the "this" to buble up.
