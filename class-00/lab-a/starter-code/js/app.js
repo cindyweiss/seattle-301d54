@@ -28,19 +28,35 @@ function makeRandom() {
   return Math.floor(Math.random() * names.length);
 }
 
+<<<<<<< HEAD
 function displayPics() {
   while (viewed.length < 6) {
     const rando = makeRandom();
     while (!viewed.includes(rando)) {
+=======
+function displayPics(){
+  while(viewed.length < 6){
+    const rando = makeRandom();
+    while(!viewed.includes(rando)){
+>>>>>>> fcf88c4309c2de86be8d54fdf3e0f6c45979fdc5
       viewed.push(rando);
     }
+    console.log(rando);
   }
+<<<<<<< HEAD
 
   // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `const to `const`.
   // The console.log would no longer work because it was used outside of the code block in which it
   console.log(viewed);
 
   for (let i = 0; i < 3; i++) {
+=======
+  // TODO: In a sentence or two, explain why the previous line of code threw an error when we changed the constiable declaration from `const to `const`.
+  // PUT YOUR RESPONSE IN THIS COMMENT
+  console.log(viewed);
+
+  for (let i = 0; i < 3; i++){
+>>>>>>> fcf88c4309c2de86be8d54fdf3e0f6c45979fdc5
     const temp = viewed.shift();
     pics[i].src = allProducts[temp].path;
     pics[i].id = allProducts[temp].name;
@@ -59,8 +75,13 @@ function handleClick(event) {
     showList();
     makeChart();
   }
+<<<<<<< HEAD
   for (let i = 0; i < names.length; i++) {
     if (event.target.id === allProducts[i].name) {
+=======
+  for(let i = 0; i < names.length; i++){
+    if(event.target.id === allProducts[i].name) {
+>>>>>>> fcf88c4309c2de86be8d54fdf3e0f6c45979fdc5
       allProducts[i].votes += 1;
       console.log(`${event.target.id} has ${allProducts[i].votes} votes in ${allProducts[i].views} views`);
     }
@@ -71,9 +92,15 @@ function handleClick(event) {
 }
 
 function showList() {
+<<<<<<< HEAD
   for (const i = 0; i < allProducts.length; i++) {
     const liEl = document.createElement('li');
     liEl.textContent = `${allProducts[i].name}  has ${allProducts[i].votes} votes in ${allProducts[i].views} views`;
+=======
+  for(let i = 0; i < allProducts.length; i++) {
+    const liEl = document.createElement('li');
+    liEl.textContent = allProducts[i].name + ' has ' + allProducts[i].votes + ' votes in ' + allProducts[i].views + ' views';
+>>>>>>> fcf88c4309c2de86be8d54fdf3e0f6c45979fdc5
     list.appendChild(liEl);
   }
 }
@@ -128,7 +155,11 @@ if (localStorage.busmall) {
   allProducts = JSON.parse(localStorage.busmall);
 } else {
   console.log('There is no local storage data; initialize app by creating instances');
+<<<<<<< HEAD
   for (let i = 0; i < names.length; i++) {
+=======
+  for(const i = 0; i < names.length; i++) {
+>>>>>>> fcf88c4309c2de86be8d54fdf3e0f6c45979fdc5
     new Product(names[i]);
   }
 }
